@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'crispy_forms',
     'core',
+    'crispy_forms',
+    # 'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -124,12 +124,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-PAYSTACK_SECRET_KEY = os.environ.get("PAYSTACK_SECRET_KEY")
-PAYSTACK_PUBLIC_KEY = os.environ.get("PAYSTACK_PUBLIC_KEY")
+PAYSTACK_SECRET_KEY = "sk_test_1cd53b82c1a6fc33e585e898f6014c1496cdba66"
+PAYSTACK_PUBLIC_KEY = "pk_test_ced402cf2352ce05278ed138ef2bf337856dc515"
+
+# PAYSTACK_SECRET_KEY = os.environ.get("PAYSTACK_SECRET_KEY")
+# PAYSTACK_PUBLIC_KEY = os.environ.get("PAYSTACK_PUBLIC_KEY")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

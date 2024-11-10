@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-
 {% block title %}initiate{% endblock title %}
 
 
@@ -12,7 +11,7 @@
             <h2>Enter Amount</h2>
             <hr>
             {% csrf_token %}
-            {{ payment_form }}
+            {{ payment_form|crispy }}
             <p>
                 <input class="btn btn-success" type="submit" value="Submit">
             </p>
